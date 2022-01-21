@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+</head>
+<body>
+    <h1>Concept of Optional Chain</h1>
+    <hr/>
+    <script type= "text/javascript">
+        var users= [
+                    {name:"Shubham", age:26, address:{state: "Delhi",city:"New Delhi"}},
+                    {name:"Sanjeet", age:25},
+                    {name: "Jaspreet", age:24, address:{state: "Madhya Pradesh", city:"Indore"}}
+        ];
+
+            for(var v=0;v<users.length;v++){
+                let user=users[v];
+                let address=users[v]?.address;
+                document.write(`<p>The name of the user is ${user.name} and his age is ${user.age}</p>`);  
+                document.write(`<p>The user belongs from the State of ${address?.state}, from the beautiful city of ${address?.city}</p>`);
+            }
+        
+    </script>
+</body>
+</html>

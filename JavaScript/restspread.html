@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+</head>
+<body>
+    <h1>Concept of callbacks</h1>
+    <hr/>
+    <script type= "text/javascript">
+        function test(x,y){
+            document.write(`<p>Values of X and Y:<br>${x}<br>${y}`);
+        }
+        function test2(x, ...y){
+            document.write(`<p>Values of X and Y:<br>${x}<br>${y}`);
+        }
+        function test3(x,y, ...z){
+            document.write(`<p>Values of X, Y and Z:<br>${x}<br>${y}<br>${z}`);
+        }
+        test(5,10);
+        test2(90);
+        test3(10,20,30,50,90);
+    </script>
+
+</body>
+</html>

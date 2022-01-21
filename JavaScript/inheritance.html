@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Constructor Example</h1>
+    <hr/>
+    <script type= 'text/javascript'>
+       class Employee{
+           constructor(name,age){
+            this.name=name;
+            this.age=age;
+        }      
+        display(){
+            document.write('<p>Name= '+ this.name +' with Age= ' + this.age +'</p>');
+        }
+    }
+    class Manager extends Employee{
+        constructor(name, age, employeesreporting){
+            super(name,age);
+            this.employeesreporting=employeesreporting;
+        }
+        display(){
+            document.write('<p>Name= '+ this.name +' with Age= ' + this.age +' and Employees Reporting'+this.employeesreporting+'</p>');
+        }
+    }
+        var e= new Manager('Shubham',69,10);
+        e.display();
+    </script>
+</body>
+</html>

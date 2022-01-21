@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+</head>
+<body>
+    <h1>Example of static and non static methods</h1>
+    <hr/>
+    <script type= "text/javascript">
+        class Dummy{
+               x=20;
+               static y=10; 
+        hello(){
+            console.log('HELLO THERE'+this.x+'and '+this.y);
+        }
+        static welcome(){
+            console.log('WELCOME THERE'+this.x+'and '+this.y);
+        }
+    }
+    var d= new Dummy();
+    d.hello();
+    Dummy.welcome();
+    </script>
+</body>
+</html>
