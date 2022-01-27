@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id='root'></div>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- Your custom script here -->
+    <script type="text/babel">
+        function Clock(){
+           let date= new Date();
+            return (<div>
+                    <h4>this is a clock component</h4>
+                    <p>{date.toLocaleTimeString()}</p>
+                    </div>);
+        }
+        //function Demo(){
+          //  return(<div>
+            //    <h3>this is a demo component inside a function</h3>
+              //  <Clock />
+               // </div>)
+        //}
+        function App()
+        {
+            return (<div><h2>Welcome to App component</h2>
+                <Clock /></div>);
+        }
+        function tick()
+        {
+            ReactDOM.render(<App />, document.getElementById('root'));
+        }
+        setInterval(tick, 1000);
+       
+    </script>
+</body>
+</html>
